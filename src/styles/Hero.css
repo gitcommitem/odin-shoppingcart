@@ -1,0 +1,9 @@
+section#hero {
+  height: 75vh;
+  background-color: aliceblue;
+}
+
+div#hero-lockup > button {
+  padding: 1rem;
+  font-size: 1rem;
+}
