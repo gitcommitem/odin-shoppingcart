@@ -32,3 +32,8 @@ body {
   display: flex;
   align-items: center;
 }
+
+#products {
+  display: flex;
+  justify-content: space-evenly;
+}
