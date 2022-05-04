@@ -1,11 +1,14 @@
 import AddToCartButton from './AddToCartButton';
 import '../styles/ProductPreview.css';
+import { Link } from 'react-router-dom';
 
-const ProductPreview = ({ name, imgSrc }) => {
+const ProductPreview = ({ route, name, imgSrc }) => {
   return (
     <div className='product-preview'>
-      <img src={imgSrc} alt='product'></img>
-      <h2>{name}</h2>
+      <Link to={`${route}`}>
+        <img src={imgSrc} alt='product'></img>
+        <h2>{name}</h2>
+      </Link>
       <AddToCartButton />
     </div>
   );

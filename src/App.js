@@ -9,9 +9,9 @@ function App () {
       <Navbar />
       <Hero />
       <section id='products'>
-        <ProductPreview name='Product 1' imgSrc='' />
-        <ProductPreview name='Product 2' imgSrc='' />
-        <ProductPreview name='Product 3' imgSrc='' />
+        <ProductPreview route='/product1' name='Product 1' imgSrc='' />
+        <ProductPreview route='/product2' name='Product 2' imgSrc='' />
+        <ProductPreview route='/product3' name='Product 3' imgSrc='' />
       </section>
       Hello World
     </div>
