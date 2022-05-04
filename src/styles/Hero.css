@@ -1,6 +1,15 @@
 section#hero {
   height: 75vh;
   background-color: aliceblue;
+  margin-bottom: 2rem;
+}
+div#hero-lockup {
+  position: relative;
+  left: 5rem;
+}
+
+div#hero-lockup > h1 {
+  font-size: 3rem;
 }
 
 div#hero-lockup > button {

@@ -5,7 +5,7 @@ import ProductPreview from './components/ProductPreview';
 
 function App () {
   return (
-    <div>
+    <div id='page-cont'>
       <Navbar />
       <Hero />
       <section id='products'>
