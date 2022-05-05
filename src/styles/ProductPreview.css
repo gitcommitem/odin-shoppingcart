@@ -1,3 +1,14 @@
-.product-preview {
-  width: 20%;
+div.product-preview {
+  width: 50%;
+}
+
+div.img-cont {
+  max-height: 65vh;
+  overflow: hidden;
+}
+
+img.product-preview {
+  width: 100%;
+  position: relative;
+  bottom: 30rem;
 }

@@ -1,12 +1,13 @@
 import '../styles/Hero.css';
 
-const Hero = () => {
+const Hero = ({ heading, subheading }) => {
   return (
-    <section className='vert-center' id='hero'>
+    <section className='center' id='hero'>
       <div id='hero-lockup'>
-        <h1>Limited Time Item or sale</h1>
-        <h2>Subheading about item</h2>
-        <button>Shop now</button>
+        <h1>{heading}</h1>
+        <h2>
+          <span>{subheading}</span>
+        </h2>
       </div>
     </section>
   );

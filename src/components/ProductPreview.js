@@ -6,7 +6,9 @@ const ProductPreview = ({ route, name, imgSrc }) => {
   return (
     <div className='product-preview'>
       <Link to={`${route}`}>
-        <img src={imgSrc} alt='product'></img>
+        <div className='img-cont'>
+          <img className='product-preview' src={imgSrc} alt='product' />
+        </div>
         <h2>{name}</h2>
       </Link>
       <AddToCartButton />

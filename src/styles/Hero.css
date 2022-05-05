@@ -1,18 +1,36 @@
 section#hero {
-  height: 75vh;
-  background-color: aliceblue;
+  height: 55vh;
+  background-image: url(/src/imgs/hero.png);
+  background-size: 60%;
+  background-blend-mode: multiply;
+  background-position: top center;
   margin-bottom: 2rem;
-}
-div#hero-lockup {
-  position: relative;
-  left: 5rem;
+  background-color: #f1eee2;
+  padding-left: 50vw;
+  padding-right: 50vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 div#hero-lockup > h1 {
   font-size: 3rem;
+  font-weight: bold;
+  background-color: white;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  border: 1px solid black;
 }
 
-div#hero-lockup > button {
-  padding: 1rem;
-  font-size: 1rem;
+div#hero-lockup > h2 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+div#hero-lockup > h2 > span {
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border: 1px solid black;
 }

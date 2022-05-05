@@ -1,5 +1,6 @@
-:root {
-  font-family: sans-serif;
+:root,
+button {
+  font-family: courier, sans-serif;
   font-size: 1rem;
 }
 
@@ -20,26 +21,48 @@ p {
   margin: 0;
 }
 
-/* Set core body defaults */
-body {
-  max-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  background-color: #ffd5a3;
+a {
+  color: black;
+  text-decoration: none;
 }
 
-.vert-center {
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: #f1eee2;
+  overflow-x: hidden;
+}
+
+.center {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 #page-cont {
-  width: 95vw;
+  width: 90vw;
   margin-left: auto;
   margin-right: auto;
 }
 
-#products {
+section#products {
   display: flex;
   justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+button {
+  padding: 1rem;
+  background-color: #ffd52c;
+  border: 3px black solid;
+  width: 40%;
+}
+
+h1.section-heading {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
