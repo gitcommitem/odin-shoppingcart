@@ -1,13 +1,17 @@
 import './styles/App.css';
+import React, { useState } from 'react';
+
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ProductPreview from './components/ProductPreview';
 import product1 from './imgs/girl-with-red-hat-JnpoOdKCm1Q-unsplash.jpg';
 import product2 from './imgs/girl-with-red-hat-4Mh3AjljekQ-unsplash.jpg';
+import ShoppingCart from './components/ShoppingCart';
 
 function App () {
   return (
     <div id='page-cont'>
+      <ShoppingCart />
       <Navbar />
       <Hero
         heading='25% off your first order'

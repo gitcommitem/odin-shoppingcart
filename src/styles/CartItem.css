@@ -1,0 +1,12 @@
+div.cart-item {
+  min-height: 15vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+div.cart-item > input {
+  width: 15%;
+  height: 2rem;
+}
