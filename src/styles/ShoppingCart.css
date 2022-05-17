@@ -5,10 +5,21 @@ div#cart-sidebar {
   background-color: white;
   min-height: 100vh;
   width: 35%;
-  z-index: 1;
-  transition: linear 1s;
+  z-index: 3;
+  transition: linear 0.3s;
 }
 
 div.closed#cart-sidebar {
-  /*transform: translateX(100rem);*/
+  transform: translateX(40rem);
+}
+
+div#full-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  min-height: 100vh;
+  min-width: 100vw;
+  z-index: 1;
+  transition: linear 0.3s;
 }
