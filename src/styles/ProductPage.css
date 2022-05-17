@@ -1,0 +1,17 @@
+main.product-page {
+  display: flex;
+  gap: 4rem;
+  position: relative;
+}
+
+div.product-img {
+  width: 50%;
+}
+
+div.product-img > img {
+  width: 100%;
+}
+
+div.product-info > input {
+  width: 15%;
+}

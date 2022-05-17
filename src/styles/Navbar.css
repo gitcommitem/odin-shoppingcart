@@ -6,6 +6,7 @@ nav {
   padding-bottom: 1rem;
   display: flex;
   justify-content: space-between;
+  z-index: 2;
 }
 
 div#bag-cont {
