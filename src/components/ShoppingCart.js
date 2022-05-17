@@ -20,9 +20,10 @@ const ShoppingCart = () => {
   for (let i = 0; i < cart.length; i++) {
     const name = cart[i].name;
     const count = cart[i].count;
+    const id = cart[i].id;
 
     displayCartItems.push(
-      <CartItem product={name} count={count} price='15.00' key={i} />
+      <CartItem product={name} count={count} price='15.00' id={id} key={i} />
     );
   }
 
