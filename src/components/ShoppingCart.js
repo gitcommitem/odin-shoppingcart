@@ -7,6 +7,7 @@ const ShoppingCart = () => {
   const [state, dispatch] = useContext(CartContext);
   const isCartOpen = state.isCartOpen;
   const cart = state.cart;
+  const itemCount = state.itemCount;
 
   const handleCartClick = () => {
     dispatch({
@@ -20,7 +21,9 @@ const ShoppingCart = () => {
     const name = cart[i].name;
     const count = cart[i].count;
 
-    displayCartItems.push(<CartItem product={name} count={count} key={i} />);
+    displayCartItems.push(
+      <CartItem product={name} count={count} price='15.00' key={i} />
+    );
   }
 
   return (
@@ -36,7 +39,7 @@ const ShoppingCart = () => {
         ) : (
           [displayCartItems]
         )}
-        <h1>Price</h1>
+        <h1>Total:${itemCount * 15}</h1>
         <button>Check Out</button>
       </div>
     </div>

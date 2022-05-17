@@ -26,6 +26,11 @@ const AddToCartButton = ({ product, id }) => {
       });
       cart.splice(index, 1);
     }
+
+    dispatch({
+      type: 'ADD_ITEMCOUNT',
+      payload: 1
+    });
   };
 
   return <button onClick={handleCartClick}>Add to bag</button>;

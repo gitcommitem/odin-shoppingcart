@@ -7,6 +7,7 @@ import { CartContext } from '../GlobalState';
 
 const Navbar = () => {
   const [state, dispatch] = useContext(CartContext);
+  const itemCount = state.itemCount;
 
   const handleCartClick = () => {
     const isCartOpen = state.isCartOpen;
@@ -24,7 +25,7 @@ const Navbar = () => {
 
       <div onClick={handleCartClick} id='bag-cont'>
         <Cookie size={24} weight='bold' />
-        <div>0</div>
+        <div>{itemCount}</div>
       </div>
     </nav>
   );

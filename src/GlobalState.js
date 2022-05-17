@@ -2,7 +2,8 @@ import React, { useReducer, createContext } from 'react';
 
 const initialState = {
   isCartOpen: false,
-  cart: []
+  cart: [],
+  itemCount: 0
 };
 
 const reducer = (state, action) => {
@@ -16,6 +17,16 @@ const reducer = (state, action) => {
       return {
         ...state,
         cart: [...state.cart, action.payload]
+      };
+    case 'ADD_ITEMCOUNT':
+      return {
+        ...state,
+        itemCount: state.itemCount + action.payload
+      };
+    case 'MINUS_ITEMCOUNT':
+      return {
+        ...state,
+        itemCount: state.itemCount - action.payload
       };
     default:
       return {
