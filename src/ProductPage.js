@@ -4,7 +4,15 @@ import Navbar from './components/Navbar';
 import ShoppingCart from './components/ShoppingCart';
 import AddToCartButton from './components/AddToCartButton';
 
+import { useState } from 'react';
+
 const ProductPage = ({ product, imgSrc, id }) => {
+  const [inputCount, setInputCount] = useState(0);
+
+  const handleInput = event => {
+    setInputCount(event.target.value);
+  };
+
   return (
     <div id='page-cont'>
       <ShoppingCart />
@@ -18,9 +26,15 @@ const ProductPage = ({ product, imgSrc, id }) => {
           <h2>24 count box set</h2>
           <p>$15.00</p>
           <p>Blerb about product</p>
-          <input type='number' min='1' max='99' defaultValue='1' />
+          <input
+            onChange={handleInput}
+            type='number'
+            min='1'
+            max='99'
+            defaultValue='1'
+          />
           <br />
-          <AddToCartButton product={product} id={id} />
+          <AddToCartButton product={product} id={id} count={inputCount} />
         </div>
       </main>
     </div>
