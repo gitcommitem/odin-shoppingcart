@@ -25,11 +25,13 @@ function App () {
             route='/product1'
             name='Confetti Cookie Set'
             imgSrc={product1}
+            id='1'
           />
           <ProductPreview
             route='/product2'
             name='Chocolate Cookie Set'
             imgSrc={product2}
+            id='2'
           />
         </section>
       </CartContextProvider>

@@ -9,10 +9,12 @@ const reducer = (state, action) => {
   switch (action.type) {
     case 'SHOW_CART':
       return {
+        ...state,
         isCartOpen: action.payload
       };
     case 'ADD_CART':
       return {
+        ...state,
         cart: [...state.cart, action.payload]
       };
     default:

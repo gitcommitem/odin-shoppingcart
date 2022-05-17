@@ -2,7 +2,7 @@ import AddToCartButton from './AddToCartButton';
 import '../styles/ProductPreview.css';
 import { Link } from 'react-router-dom';
 
-const ProductPreview = ({ route, name, imgSrc }) => {
+const ProductPreview = ({ route, name, imgSrc, id }) => {
   return (
     <div className='product-preview'>
       <Link to={`${route}`}>
@@ -11,7 +11,7 @@ const ProductPreview = ({ route, name, imgSrc }) => {
         </div>
         <h2>{name}</h2>
       </Link>
-      <AddToCartButton />
+      <AddToCartButton product={name} id={id} />
     </div>
   );
 };
