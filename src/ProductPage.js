@@ -7,7 +7,7 @@ import AddToCartButton from './components/AddToCartButton';
 import { useState } from 'react';
 
 const ProductPage = ({ product, imgSrc, id }) => {
-  const [inputCount, setInputCount] = useState(0);
+  const [inputCount, setInputCount] = useState(1);
 
   const handleInput = event => {
     setInputCount(event.target.value);
@@ -19,7 +19,7 @@ const ProductPage = ({ product, imgSrc, id }) => {
       <Navbar />
       <main class='product-page'>
         <div class='product-img'>
-          <img src={imgSrc} />
+          <img src={imgSrc} alt='Confetti cookies' />
         </div>
         <div class='product-info'>
           <h1>{product}</h1>
@@ -31,7 +31,7 @@ const ProductPage = ({ product, imgSrc, id }) => {
             type='number'
             min='1'
             max='99'
-            defaultValue='1'
+            value={inputCount}
           />
           <br />
           <AddToCartButton product={product} id={id} count={inputCount} />
