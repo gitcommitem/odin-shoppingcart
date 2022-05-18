@@ -23,6 +23,11 @@ const reducer = (state, action) => {
         ...state,
         cart: action.payload
       };
+    case 'UPDATE_CART':
+      return {
+        ...state,
+        cart: [...state.cart, action.payload]
+      };
     case 'ADD_ITEMCOUNT':
       return {
         ...state,
@@ -32,6 +37,11 @@ const reducer = (state, action) => {
       return {
         ...state,
         itemCount: state.itemCount - action.payload
+      };
+    case 'UPDATE_ITEMCOUNT':
+      return {
+        ...state,
+        itemCount: action.payload
       };
     default:
       return {

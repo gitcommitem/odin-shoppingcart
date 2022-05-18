@@ -8,6 +8,32 @@ const CartItem = ({ product, count, price, id }) => {
   const cart = state.cart;
   const index = cart.findIndex(element => element.id === id);
 
+  const handleInputChange = event => {
+    dispatch({
+      type: 'UPDATE_CART',
+      payload: { id: id, name: product, count: +event.target.value }
+    });
+
+    cart.splice(index, 1);
+
+    const getItemCount = () => {
+      if (cart.length === 0) {
+        return +event.target.value;
+      } else {
+        const otherItem = cart.filter(item => item.id !== id);
+        const otherItemCount = otherItem[0].count;
+        return +otherItemCount + +event.target.value;
+      }
+    };
+
+    const updatedItemCount = getItemCount();
+
+    dispatch({
+      type: 'UPDATE_ITEMCOUNT',
+      payload: updatedItemCount
+    });
+  };
+
   const handleDeleteClick = () => {
     dispatch({
       type: 'MINUS_ITEMCOUNT',
@@ -30,7 +56,13 @@ const CartItem = ({ product, count, price, id }) => {
         <p>24 Count</p>
         <p>${price * count}</p>
       </div>
-      <input type='number' min='0' max='99' value={count} />
+      <input
+        onChange={handleInputChange}
+        type='number'
+        min='0'
+        max='99'
+        value={count}
+      />
       <X onClick={handleDeleteClick} size={24} weight='bold' />
     </div>
   );
