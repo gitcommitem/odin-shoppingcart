@@ -1,6 +1,6 @@
 # TOP Javascript Course Project - Shopping Cart
 
-04/26/2022 ~
+04/26/2022 ~ 05/17/2022
 
 ## Objectives
 
