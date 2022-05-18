@@ -13,3 +13,5 @@ Your site should including the following:
 - Shopping cart should update pricing if item amount changes
 
 ## Learnings
+
+Still getting a feel for how to code in React. Encountered the leading zero bug that happens inside of controlled inputs. I would like to loop back to this project at a later time to fix bugs, redo the site design, and polish.
